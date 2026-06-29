@@ -245,7 +245,7 @@
           localStorage.dirham = dirham;
           this.cent = this.centFor(100 * this.dirhamFor(dirham).value).value;
           this.rial = this.rialFor(20 * this.dirhamFor(dirham).value).value;
-          this.franc = this.francFor(50 * this.dirhamFor(dirham).value).value;
+          this.franc = this.francFor(100 * this.dirhamFor(dirham).value).value;
         },
         cent(cent) {
           this.dirham = this.dirhamFor(0.01 * this.centFor(cent).value).value; // 1/100 = 0.01
