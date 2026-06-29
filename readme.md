@@ -8,7 +8,7 @@
 
 Simple useful web tools for some daily stuff needs.
 
-[**🌐 View Live**](https://ambratolm.github.io/web-tools)
+[**🌐 View Live**](https://simple-works.github.io/web-tools)
 
 ![Screenshot](./screenshot1.gif?raw=true)
 ![Screenshot](./screenshot2.gif?raw=true)
