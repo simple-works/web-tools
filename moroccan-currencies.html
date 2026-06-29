@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Moroccan Currencies - Ambratolm Web Tools</title>
@@ -152,8 +152,8 @@
           digit: "west",
           format: {
             pattern: "# !",
-            separator: " "
-          }
+            separator: " ",
+          },
         };
       },
       mounted() {
@@ -179,7 +179,7 @@
         },
         dir() {
           return this.lang === "ar" ? "rtl" : "ltr";
-        }
+        },
       },
       methods: {
         dirhamFor(value, lang = "en") {
@@ -226,7 +226,7 @@
           return `${writtenNumber(value, { lang })} ${suffix}`;
         },
         arabicHinduDigitsFor(value) {
-          return value.replace(/\d/g, i =>  '٠١٢٣٤٥٦٧٨٩'[i])
+          return value.replace(/\d/g, (i) => "٠١٢٣٤٥٦٧٨٩"[i]);
         },
         format(currency, options) {
           return `${currency.dollars()}.${currency.cents()}`;
@@ -237,8 +237,8 @@
           this.lang =
             localStorage.lang !== undefined ? localStorage.lang : "en";
           this.digit =
-          localStorage.digit !== undefined ? localStorage.digit : "west";
-        }
+            localStorage.digit !== undefined ? localStorage.digit : "west";
+        },
       },
       watch: {
         dirham(dirham) {
@@ -254,15 +254,15 @@
           this.dirham = this.dirhamFor(0.05 * this.rialFor(rial).value).value; // 1/20 = 0.05;
         },
         franc(franc) {
-          this.dirham = this.dirhamFor(0.02 * this.francFor(franc).value).value; // 1/50 = 0.02
+          this.dirham = this.dirhamFor(0.01 * this.francFor(franc).value).value; // 1/100 = 0.01
         },
         lang(lang) {
           localStorage.lang = lang;
         },
         digit(digit) {
           localStorage.digit = digit;
-        }
-      }
+        },
+      },
     });
   </script>
 </html>
